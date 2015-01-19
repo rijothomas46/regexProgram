@@ -1,0 +1,74 @@
+regex.cpp:19:21: error: ‘>>’ should be ‘> >’ within a nested template argument list
+ vector<vector<string>> coloredLines;
+                     ^
+regex.cpp:21:21: error: ‘>>’ should be ‘> >’ within a nested template argument list
+ vector<vector<string>> captures;
+                     ^
+regex.cpp:24:21: error: ‘>>’ should be ‘> >’ within a nested template argument list
+ vector<vector<string>> captureSolutions;
+                     ^
+regex.cpp: In function ‘bool checkSolution()’:
+regex.cpp:134:38: error: ‘to_string’ was not declared in this scope
+                 hint += to_string(i+1);
+                                      ^
+regex.cpp:157:42: error: ‘to_string’ was not declared in this scope
+                     hint += to_string(i+1);
+                                          ^
+regex.cpp:180:42: error: ‘to_string’ was not declared in this scope
+                     hint += to_string(i+1);
+                                          ^
+regex.cpp:190:42: error: ‘to_string’ was not declared in this scope
+                     hint += to_string(i+1);
+                                          ^
+regex.cpp: In function ‘void performRegex()’:
+regex.cpp:305:30: error: ‘std::string’ has no member named ‘back’
+             if (regexPattern.back() != '\\')
+                              ^
+regex.cpp:330:14: error: ‘words_begin’ does not name a type
+         auto words_begin = sregex_iterator(s.begin(), s.end(), r);
+              ^
+regex.cpp:331:14: error: ‘words_end’ does not name a type
+         auto words_end = sregex_iterator();
+              ^
+regex.cpp:333:34: error: ‘words_begin’ was not declared in this scope
+         for (sregex_iterator j = words_begin; j != words_end; j++)
+                                  ^
+regex.cpp:333:52: error: ‘words_end’ was not declared in this scope
+         for (sregex_iterator j = words_begin; j != words_end; j++)
+                                                    ^
+regex.cpp:341:28: error: ‘words_end’ was not declared in this scope
+         if (words_begin == words_end)
+                            ^
+regex.cpp:348:23: error: ‘x’ does not name a type
+             for (auto x:m) 
+                       ^
+regex.cpp:357:9: error: expected ‘;’ before ‘}’ token
+         }
+         ^
+regex.cpp:357:9: error: expected primary-expression before ‘}’ token
+regex.cpp:357:9: error: expected ‘;’ before ‘}’ token
+regex.cpp:357:9: error: expected primary-expression before ‘}’ token
+regex.cpp:357:9: error: expected ‘)’ before ‘}’ token
+regex.cpp:357:9: error: expected primary-expression before ‘}’ token
+regex.cpp: In function ‘void getFile(std::string)’:
+regex.cpp:365:22: error: no matching function for call to ‘std::basic_ifstream<char>::basic_ifstream(std::string&)’
+     ifstream infile(s);
+                      ^
+regex.cpp:365:22: note: candidates are:
+In file included from regex.cpp:5:0:
+/usr/include/c++/4.9/fstream:470:7: note: std::basic_ifstream<_CharT, _Traits>::basic_ifstream(const char*, std::ios_base::openmode) [with _CharT = char; _Traits = std::char_traits<char>; std::ios_base::openmode = std::_Ios_Openmode]
+       basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
+       ^
+/usr/include/c++/4.9/fstream:470:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const char*’
+/usr/include/c++/4.9/fstream:456:7: note: std::basic_ifstream<_CharT, _Traits>::basic_ifstream() [with _CharT = char; _Traits = std::char_traits<char>]
+       basic_ifstream() : __istream_type(), _M_filebuf()
+       ^
+/usr/include/c++/4.9/fstream:456:7: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/4.9/fstream:430:11: note: std::basic_ifstream<char>::basic_ifstream(const std::basic_ifstream<char>&)
+     class basic_ifstream : public basic_istream<_CharT, _Traits>
+           ^
+/usr/include/c++/4.9/fstream:430:11: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const std::basic_ifstream<char>&’
+regex.cpp: In function ‘int main()’:
+regex.cpp:446:49: error: ‘to_string’ was not declared in this scope
+     getFile("problems/problem" + to_string(level));
+                                                 ^
